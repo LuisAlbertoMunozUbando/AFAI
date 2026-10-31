@@ -18,7 +18,7 @@ Automation Foundry AI is an emerging AI-powered engineering knowledge and integr
 | **AFAI source repository** | [GitHub repository](https://github.com/LuisAlbertoMunozUbando/AFAI) |
 | **IdeaFactory application portfolio** | [Explore IdeaFactory](https://luisalbertomunozubando.github.io/IdeaFactory/) |
 | **Founder profile and CV** | [Prof. Alberto Muñoz](https://cv.albertomunoz.ai) |
-| **Industrial pilot enquiries** | [Contact by email](mailto:contact@albertomunoz.ai?subject=Automation%20Foundry%20AI%20Pilot%20Enquiry) |
+| **Industrial pilot enquiries** | [Contact by email](mailto:luisalbertomunozubando@gmail.com?subject=Automation%20Foundry%20AI%20Pilot%20Enquiry) |
 
 ## Community newsletter signup — Google Sheets integration
 
@@ -59,7 +59,7 @@ These are the **five applications directly linked from the current landing page*
 - [How Automation Foundry works](https://luisalbertomunozubando.github.io/AFAI/#how)
 - [Technology and integration vision](https://luisalbertomunozubando.github.io/AFAI/#technology)
 - [Existing AI applications](https://luisalbertomunozubando.github.io/AFAI/#applications)
-- [Enquire about an industrial pilot](mailto:contact@albertomunoz.ai?subject=Automation%20Foundry%20AI%20Pilot%20Enquiry)
+- [Enquire about an industrial pilot](mailto:luisalbertomunozubando@gmail.com?subject=Automation%20Foundry%20AI%20Pilot%20Enquiry)
 
 ## What we are building
 
@@ -83,7 +83,7 @@ The longer-term vision is a reusable engineering integration layer for Physical 
 ## Contact
 
 **Industrial pilots, robotics integration partnerships, and feedback:**  
-[contact@albertomunoz.ai](mailto:contact@albertomunoz.ai)
+[luisalbertomunozubando@gmail.com](mailto:luisalbertomunozubando@gmail.com)
 
 *Note: The email address above is the contact address currently shown on the landing page and should be confirmed before external outreach.*
 
