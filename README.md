@@ -12,6 +12,7 @@ Automation Foundry AI is an emerging AI-powered engineering knowledge and integr
 | Resource | Link |
 | --- | --- |
 | **AFAI landing page** | [Open website](https://luisalbertomunozubando.github.io/AFAI/) |
+| **Business Model Canvas & Customer Value** | [View business model](https://luisalbertomunozubando.github.io/AFAI/business-model.html) |
 | **AFAI source repository** | [GitHub repository](https://github.com/LuisAlbertoMunozUbando/AFAI) |
 | **IdeaFactory application portfolio** | [Explore IdeaFactory](https://luisalbertomunozubando.github.io/IdeaFactory/) |
 | **Founder profile and CV** | [Prof. Alberto Muñoz](https://cv.albertomunoz.ai) |
@@ -34,6 +35,7 @@ These are the **five applications directly linked from the current landing page*
 ## Explore the landing page
 
 - [Overview — Physical AI Engineering Copilot](https://luisalbertomunozubando.github.io/AFAI/#top)
+- [Business Model Canvas — customers, value, pricing and ROI](https://luisalbertomunozubando.github.io/AFAI/business-model.html)
 - [The engineering knowledge problem](https://luisalbertomunozubando.github.io/AFAI/#problem)
 - [How Automation Foundry works](https://luisalbertomunozubando.github.io/AFAI/#how)
 - [Technology and integration vision](https://luisalbertomunozubando.github.io/AFAI/#technology)
