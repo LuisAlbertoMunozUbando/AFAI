@@ -12,11 +12,29 @@ Automation Foundry AI is an emerging AI-powered engineering knowledge and integr
 | Resource | Link |
 | --- | --- |
 | **AFAI landing page** | [Open website](https://luisalbertomunozubando.github.io/AFAI/) |
+| **Free community signup (activation pending)** | [Join the community](https://luisalbertomunozubando.github.io/AFAI/community.html) |
 | **Business Model Canvas & Customer Value** | [View business model](https://luisalbertomunozubando.github.io/AFAI/business-model.html) |
 | **AFAI source repository** | [GitHub repository](https://github.com/LuisAlbertoMunozUbando/AFAI) |
 | **IdeaFactory application portfolio** | [Explore IdeaFactory](https://luisalbertomunozubando.github.io/IdeaFactory/) |
 | **Founder profile and CV** | [Prof. Alberto Muñoz](https://cv.albertomunoz.ai) |
 | **Industrial pilot enquiries** | [Contact by email](mailto:contact@albertomunoz.ai?subject=Automation%20Foundry%20AI%20Pilot%20Enquiry) |
+
+## Community newsletter signup — Google Sheets integration
+
+The [community signup page](https://luisalbertomunozubando.github.io/AFAI/community.html) is published, but **submissions are intentionally disabled until the secure receiving endpoint and privacy arrangements are activated**. Do not describe it as collecting subscriptions yet.
+
+Subscriber data will be stored in a private native Google Sheet named **AFAI - Community Newsletter and Industrial Challenges**, tab **Subscribers**. It includes contact information, company, AI/robotics roles, challenges, topic preferences, and explicit consent flags.
+
+**Activation steps for the repository owner:**
+
+1. Open the [private subscriber spreadsheet](https://docs.google.com/spreadsheets/d/1LOPjtL2iS4WYe3pL1RqobwnNQW3Rb1busFATAMpXGvc/edit).
+2. Choose **Extensions → Apps Script** and paste [google-apps-script/Code.gs](./google-apps-script/Code.gs).
+3. Review the script, security, consent, unsubscribe procedure, data retention, and privacy policy. Deploy as a Web App running **as the owner**, accessible to **Anyone**. **Never share the private spreadsheet publicly.**
+4. Copy the deployment's `https://script.google.com/macros/s/.../exec` URL into `ENDPOINT` near the bottom of [community.html](./community.html), replacing the empty string. Commit the change.
+5. Test with a non-sensitive test record, verify a row appears in the **Subscribers** tab, test failure cases and duplicates, and then announce that registration is live.
+6. Maintain an opt-out process before sending newsletters; the form does not automatically send emails.
+
+**Security note:** Public Apps Script endpoints may be abused by bots. Consider CAPTCHA, rate limiting, a managed form provider, and a fuller privacy notice before production launch. This is a starter integration, not a production-grade CRM.
 
 ## Existing AI applications
 
