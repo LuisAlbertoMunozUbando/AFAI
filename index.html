@@ -66,8 +66,14 @@ async function refreshQuota(){
       return;
     }
     if(!response.ok)throw Error('HTTP '+response.status);
-    quota.textContent=data.remaining+' of '+data.limit+
-      ' questions remaining today ('+data.date+').';
+    if(data.unlimited === true || data.role === 'admin'){
+      quota.textContent='Unlimited Tokens';
+    }else if(Number.isFinite(data.remaining) && Number.isFinite(data.limit)){
+      quota.textContent=data.remaining+' of '+data.limit+
+        ' questions remaining today ('+data.date+').';
+    }else{
+      quota.textContent='Allowance information unavailable.';
+    }
   }catch(e){
     quota.textContent='Unable to check allowance: '+e.message;
   }
