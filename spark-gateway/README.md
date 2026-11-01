@@ -44,3 +44,18 @@ curl -fsS http://127.0.0.1:8020/healthz
 ```
 
 Only change the AFAI service, not the stable Knowledge or YouTube2Knowledge services. If the vLLM host port differs from the checked-in Compose file, use the observed live port in `SPARK_VLLM_URL`.
+
+## Verified live inventory (user-provided Spark output, 2026-11-01)
+
+- `youtube2knowledge-llm-1`: healthy, host `127.0.0.1:8001` -> container `8000`; `/v1/models` reports `Qwen/Qwen2.5-7B-Instruct` (32,768 max context).
+- `youtube2knowledge-api-1`: healthy at `8020`; `youtube2knowledge-asr-1`: healthy at `9000`.
+- `slideextractor-worker.service`: active; `research-knowledge-api.service` and `research-knowledge-web.service`: inactive. Do not start them for text-only Q&A.
+- rclone remotes: `article-foundry-drive:`, `knowledge-drive:`, `maya-drive:`. These do **not** prove that Google Docs API Application Default Credentials are configured.
+
+### Validate Google Docs credentials before exposing the gateway
+
+From the same shell/environment that will run AFAI, check that Google ADC exists and can access the target folder; the existing rclone remote alone is not sufficient for the Google Docs API client. Do not paste OAuth tokens or JSON credential files into chat. If ADC is missing, configure OAuth ADC with Drive/Docs scopes or switch the backend to a dedicated rclone-based import workflow that creates native Docs.
+
+### Deployment constraints
+
+Keep AFAI on loopback port 8015 and `--workers 1`. AFAI must not modify or restart the healthy YouTube2Knowledge containers. Restrict the destination folder's current `anyone:writer` sharing before storing sensitive questions.
