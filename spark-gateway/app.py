@@ -12,7 +12,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel, Field
 
-VLLM=os.getenv("SPARK_VLLM_URL","http://127.0.0.1:8000").rstrip("/")
+VLLM=os.getenv("SPARK_VLLM_URL","http://127.0.0.1:8001").rstrip("/")
 TOKEN=os.getenv("AFAI_API_TOKEN","")
 FOLDER=os.getenv("AFAI_DRIVE_FOLDER_ID","1XH56iWCCPidIG5SVO36otRkQCrx3DUbV")
 ORIGINS=[s.strip() for s in os.getenv("AFAI_ALLOWED_ORIGINS","https://luisalbertomunozubando.github.io").split(",") if s.strip()]
