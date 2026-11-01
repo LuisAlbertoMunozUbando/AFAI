@@ -1,0 +1,10 @@
+
+# AFAI private credentials and token databases
+.env
+.env.*
+*.sqlite3
+*.sqlite3-shm
+*.sqlite3-wal
+*private_tokens*.xlsx
+*.backup-*
+__pycache__/

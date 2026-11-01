@@ -41,6 +41,40 @@ window.AFAI_GATEWAY_URL = "https://afai-api.albertomunoz.ai"; // Set to the HTTP
  const token=document.createElement('input');token.id='afai-token';token.type='password';token.autocomplete='off';token.placeholder='Enter your pilot token';token.style.cssText='width:100%;padding:12px;background:#091219;color:white;border:1px solid #58717c;border-radius:8px';
  submit.parentNode.insertBefore(tokenLabel,submit);submit.parentNode.insertBefore(token,submit);
  const history=[];
+
+const quota=document.createElement('p');
+quota.id='afai-quota';
+quota.style.cssText='margin:10px 0;color:#a3e635;font-weight:600';
+quota.textContent='Enter your token to check your allowance.';
+submit.parentNode.insertBefore(quota,submit);
+
+async function refreshQuota(){
+  const value=token.value.trim();
+  if(!value){
+    quota.textContent='Enter your token to check your allowance.';
+    return;
+  }
+  quota.textContent='Checking allowance...';
+  try{
+    const response=await fetch(
+      window.AFAI_GATEWAY_URL+'/quota',
+      {headers:{Authorization:'Bearer '+value}}
+    );
+    const data=await response.json().catch(()=>({}));
+    if(response.status===401){
+      quota.textContent='Invalid access token.';
+      return;
+    }
+    if(!response.ok)throw Error('HTTP '+response.status);
+    quota.textContent=data.remaining+' of '+data.limit+
+      ' questions remaining today ('+data.date+').';
+  }catch(e){
+    quota.textContent='Unable to check allowance: '+e.message;
+  }
+}
+
+token.addEventListener('change',refreshQuota);
+
  submit.textContent='Ask Anything →';
  submit.addEventListener('click',async()=>{
   const q=query.value.trim();out.replaceChildren();
@@ -60,11 +94,16 @@ window.AFAI_GATEWAY_URL = "https://afai-api.albertomunoz.ai"; // Set to the HTTP
    const answer=document.createElement('div');answer.style.whiteSpace='pre-wrap';answer.textContent=data.answer||'No answer received';out.appendChild(answer);
    const meta=document.createElement('p');meta.style.cssText='margin-top:12px;font-size:12px;color:#a3e635';
    if(data.saved&&data.document&&data.document.url){const a=document.createElement('a');a.href=data.document.url;a.target='_blank';a.rel='noopener noreferrer';a.style.color='#a3e635';a.textContent='Saved to Google Docs: '+data.document.name;meta.appendChild(a);}
-   else{meta.textContent='Answer received, but NOT saved to Google Docs. '+(data.save_error||'');}
+   else if(data.archived===true || data.saved===true){
+  meta.textContent='Answer archived successfully.';
+}
+else{
+  meta.textContent='Answer received; archival not confirmed.';
+}
    out.appendChild(meta);
    history.push({role:'user',content:q},{role:'assistant',content:data.answer||''});query.value='';
   }catch(e){out.textContent='Unable to complete request: '+e.message+'. No successful save was confirmed.';}
-  finally{submit.disabled=false;submit.textContent='Ask Anything →';}
+  finally{submit.disabled=false;submit.textContent='Ask Anything →';refreshQuota();}
  });
 })();
 </script>
