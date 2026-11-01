@@ -120,3 +120,27 @@ Agents negotiate motor winding, gearbox machining, thermal constraints, PCBA, su
 Potential products: AFAI Engineering Copilot (subscription), AFAI Negotiation Network (future B2B coordination), AFAI Physical Execution (enterprise integration). **Agentic Industrial Economics** is a proposed research direction for AI-mediated industrial resource allocation and value creation.
 
 **Guardrails:** Human authorization for binding commitments, expenditure, IP disclosure and physical execution; confidentiality and access control; independent machine safety checks. No claims of validated autonomous execution or commercial traction.
+
+## Knowledge & Agent Console — proposed unified prompt
+
+The homepage now contains a **front-end preview** for searching future shared engineering outputs and requesting analyses, visualizations, simulations, collaborative agent workflows, or robot/IoT instructions. **No live search, repository ingestion, account entitlement, agent execution or device control is currently implemented by this UI.** The preview never submits or stores prompts.
+
+### Proposed access tiers
+| Tier | Proposed scope |
+| --- | --- |
+| Student | Public educational resources and guided exercises |
+| Silver | Public knowledge discovery and research-interest profiles |
+| Gold | Advanced analyses, charts, simulations and exports |
+| Platinum | Private projects and approved collaborative agents |
+| Enterprise | On-premise deployments, private industrial connectors, robot/IoT integration |
+
+### Repository and backend implementation roadmap
+1. Define a common artifact manifest: artifact ID, project/tenant, owner, source app, output type (PDF, chart, video, dataset, simulation), version, timestamp, license, confidentiality, tags, citations, storage URI and lineage.
+2. Add authenticated upload/ingestion APIs for every AFAI/IdeaFactory application. Store immutable objects in object storage, metadata in a database, extracted text in full-text and vector indexes; support PDFs, figures and multimodal outputs.
+3. Implement a permission-filtered retrieval API with hybrid semantic/keyword search, citations, document previews, audit logs, retention/deletion and tenant isolation. Never expose private reports through static GitHub Pages.
+4. Implement verified user identities, actual entitlements, quotas, consent-driven interest capture, billing and a separate admin console. Client-side tier selectors must never grant privileges.
+5. Add a job API for analysis, plots and simulations with explicit cost estimates, timeouts, resource quotas, reproducible outputs and artifacts returned to the same repository.
+6. Add a policy-controlled agent orchestrator with tool allowlists, scoped credentials, human approvals, dry-run mode and signed audit events.
+7. For robots and IoT, use authenticated gateway connectors, independent machine safety controllers, command validation, device identity, rate limits, emergency-stop integration and approval gates. Do not execute arbitrary natural-language commands directly on machinery.
+
+The public homepage is currently a product preview only. Do not enter confidential industrial data in the demonstration prompt.
