@@ -90,3 +90,33 @@ The longer-term vision is a reusable engineering integration layer for Physical 
 ---
 
 **Not just faster robots. Faster engineering. Faster integration. Faster value creation.**
+
+## Proposed expansion: Agentic Industrial Collaboration & Negotiation
+
+**Vision, not currently deployed:** Extend AFAI from a Physical AI Engineering Copilot into an agentic engineering coordination platform connecting creative design, industrial production and physical hardware.
+
+### Six agent families
+- **Innovation:** research, prior art, product concepts, design and prototyping.
+- **Negotiation:** budgets, supplier bids, technical constraints, terms and documented agreements.
+- **Manufacturing:** CNC, winding, gearboxes, PCBA, assembly, sourcing and quality.
+- **Physical AI:** simulation, ROS 2, Jetson, perception and supervised robotic execution.
+- **Governance & IP:** provenance, confidentiality, patents, safety, audit and human approval.
+- **Business & Investment:** customer discovery, unit economics, licensing, partnerships and startups.
+
+### Coordination protocols and architecture
+Capability discovery; Contract Net requests for proposals; multi-objective cost/time/quality/energy negotiation; coalition formation; and contract-based task verification. Proposed stack: A2A for inter-agent collaboration, MCP for tool access, structured engineering memory, CAD/PLM/ERP adapters, simulation and ROS 2. Never connect LLM negotiations directly to unsafe physical commands.
+
+### Existing applications as agent tools
+YouTube2Knowledge: process learning; VisionFromYouTube: visual operations analysis; Knowledge: evidence-backed memory; STL: science, technology and patent landscape; Innovaction: idea development. Integration remains a roadmap item.
+
+### Example: robotic actuator co-design
+Agents negotiate motor winding, gearbox machining, thermal constraints, PCBA, supplier offers, costs, delivery and validation criteria before any human-approved fabrication.
+
+### 90-day pilot and business models
+- Days 1–30: four-agent technical proposal (design, manufacturing, procurement, negotiation).
+- Days 31–60: connect existing knowledge tools, supplier evaluation and optimization.
+- Days 61–90: simulation and supervised physical demonstration; measure time, quality and costs.
+
+Potential products: AFAI Engineering Copilot (subscription), AFAI Negotiation Network (future B2B coordination), AFAI Physical Execution (enterprise integration). **Agentic Industrial Economics** is a proposed research direction for AI-mediated industrial resource allocation and value creation.
+
+**Guardrails:** Human authorization for binding commitments, expenditure, IP disclosure and physical execution; confidentiality and access control; independent machine safety checks. No claims of validated autonomous execution or commercial traction.
