@@ -153,6 +153,20 @@
     table { font-size: 14px; }
     th, td { padding: 10px; }
   }
+
+  /* Shared AFAI identity */
+  :root { --bg:#080d12; --panel:#111920; --panel-2:#15212a; --line:#27343c; --text:#f2f6f6; --muted:#a0adb5; --accent:#a3e635; color-scheme:dark; }
+  header {background:rgba(8,13,18,.96)}
+  .bar {padding-top:12px;padding-bottom:12px}
+  .product-brand-art {position:relative;display:block;width:min(360px,100%);aspect-ratio:1340/330;overflow:hidden;flex-shrink:0}
+  .product-brand-art img {position:absolute;display:block;width:114.6269%;max-width:none;height:auto;left:-8.209%;top:-39.394%}
+  .product-home-button {display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 20px;border-radius:7px;background:#a3e635;color:#08100b;font-size:14px;font-weight:700;white-space:nowrap;margin-left:auto}
+  .product-home-button:hover {background:#c3f875;text-decoration:none}
+  .product-home-button:focus-visible,.product-brand-art:focus-visible {outline:3px solid #f2f6f6;outline-offset:4px}
+  .bar nav {width:100%}
+  html {scroll-padding-top:190px}
+  @media(max-width:600px){header{position:relative}.product-brand-art{width:min(320px,100%)}.product-home-button{margin-left:0}html{scroll-padding-top:16px}}
+
 </style>
 </head>
 <body>
@@ -161,7 +175,8 @@
 
 <header id="top">
   <div class="bar">
-    <div class="brand">Automation Foundry <span>AI</span></div>
+    <a class="product-brand-art" href="/AFAI/" aria-label="Automation Foundry AI homepage"><img src="assets/afai-brand-family.png" alt="" width="1536" height="1024" fetchpriority="high"></a>
+    <a class="product-home-button" href="/AFAI/">← Back to AFAI</a>
     <nav aria-label="Sections">
       <ul>
         <li><a href="#overview">Overview</a></li>
@@ -186,7 +201,7 @@
     <p class="authors">Luis Alberto Muñoz Ubando</p>
     <p class="affil">Founder &amp; CEO (sole founder to date) · Tecnológico de Monterrey</p>
     <div class="links">
-      <a class="btn primary" href="https://luisalbertomunozubando.github.io/AFAI/">Project portal ↗</a>
+      <a class="btn primary" href="https://luisalbertomunozubando.github.io/AFAI/">← Back to AFAI</a>
       <a class="btn" href="https://github.com/LuisAlbertoMunozUbando/AFAI">Code ↗</a>
       <a class="btn" href="https://luisalbertomunozubando.github.io/IdeaFactory/">Existing applications (IdeaFactory) ↗</a>
     </div>
