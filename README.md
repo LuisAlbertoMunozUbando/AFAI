@@ -144,3 +144,12 @@ The homepage now contains a **front-end preview** for searching future shared en
 7. For robots and IoT, use authenticated gateway connectors, independent machine safety controllers, command validation, device identity, rate limits, emergency-stop integration and approval gates. Do not execute arbitrary natural-language commands directly on machinery.
 
 The public homepage is currently a product preview only. Do not enter confidential industrial data in the demonstration prompt.
+
+
+## Experiment — simulation and robot conception
+
+[Open Experiment](https://luisalbertomunozubando.github.io/AFAI/experiment.html): English interactive examples, telerobot/humanoid/exoskeleton component catalogues, adapter capabilities, manifest exports and the AFAI feature inventory.
+
+See [simulation/README.md](simulation/README.md) for backend boundaries, proposed API and adapter validation gates, [adapters.json](simulation/adapters.json) for the integration registry, and [manifest.schema.json](simulation/manifest.schema.json) for draft validation. These are frontend functions and integration contracts, not installed simulation runtimes. All simulation adapters remain disconnected.
+
+The homepage currently configures a Spark gateway URL and implements token-based chat/quota calls; its live availability was not verified for this change. Older statements above that the homepage never sends prompts describe the earlier preview, not the current configured Q&A code. This change preserves that code unchanged.

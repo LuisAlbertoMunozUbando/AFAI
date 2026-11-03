@@ -1,0 +1,129 @@
+{
+  "schema_version": "1.0",
+  "adapters": [
+    {
+      "id": "isaac_sim",
+      "name": "Isaac Sim",
+      "role": "Robot scenes, physics, sensor simulation and synthetic data",
+      "inputs": [
+        "USD scene",
+        "robot model",
+        "sensor calibration",
+        "task configuration"
+      ],
+      "outputs": [
+        "sensor recordings",
+        "trajectories",
+        "annotations",
+        "evaluation logs"
+      ],
+      "preflight": [
+        "Supported GPU and driver",
+        "Runtime and extension versions",
+        "Asset paths and ROS 2 compatibility"
+      ],
+      "documentation": "https://docs.isaacsim.omniverse.nvidia.com/latest/index.html",
+      "status": "not_connected",
+      "tested_versions": []
+    },
+    {
+      "id": "isaac_lab",
+      "name": "Isaac Lab",
+      "role": "Robot learning: task environments, reinforcement/imitation learning and evaluation",
+      "inputs": [
+        "environment configuration",
+        "observation/action definitions",
+        "reward/termination rules",
+        "demonstrations or policy"
+      ],
+      "outputs": [
+        "policy checkpoints",
+        "training curves",
+        "evaluation episodes"
+      ],
+      "preflight": [
+        "Backend and renderer selection",
+        "Framework/runtime version pair",
+        "Environment count, memory and seeds"
+      ],
+      "documentation": "https://isaac-sim.github.io/IsaacLab/main/index.html",
+      "status": "not_connected",
+      "tested_versions": []
+    },
+    {
+      "id": "omniverse",
+      "name": "Omniverse / OpenUSD",
+      "role": "Scene composition and application/extension workflows",
+      "inputs": [
+        "USD layers",
+        "CAD-derived assets",
+        "materials",
+        "extension configuration"
+      ],
+      "outputs": [
+        "versioned scene",
+        "rendered views",
+        "application artifacts"
+      ],
+      "preflight": [
+        "Kit or service version",
+        "Extension dependencies",
+        "Units, references and asset resolution"
+      ],
+      "documentation": "https://docs.nvidia.com/omniverse/index.html",
+      "status": "not_connected",
+      "tested_versions": []
+    },
+    {
+      "id": "cosmos",
+      "name": "Cosmos",
+      "role": "World-model and data-curation workflows for Physical AI",
+      "inputs": [
+        "video or conditioning inputs",
+        "model checkpoint",
+        "generation/curation configuration"
+      ],
+      "outputs": [
+        "generated or curated data",
+        "model outputs",
+        "provenance record"
+      ],
+      "preflight": [
+        "Specific model licence and version",
+        "Memory budget",
+        "Separate generated content from physical validation"
+      ],
+      "documentation": "https://docs.nvidia.com/cosmos/",
+      "status": "not_connected",
+      "tested_versions": []
+    },
+    {
+      "id": "mujoco",
+      "name": "MuJoCo",
+      "role": "Articulated dynamics, contacts and control experiments",
+      "inputs": [
+        "MJCF or supported robot model",
+        "controller configuration",
+        "contact parameters"
+      ],
+      "outputs": [
+        "states and controls",
+        "contact forces",
+        "rollouts and metrics"
+      ],
+      "preflight": [
+        "Runtime and optional accelerator backend",
+        "Joint/actuator mapping",
+        "Contact solver settings"
+      ],
+      "documentation": "https://mujoco.readthedocs.io/en/stable/overview.html",
+      "status": "not_connected",
+      "tested_versions": []
+    }
+  ],
+  "extension_targets": [
+    "Newton and PhysX backend profiles",
+    "ROS 2 bridges",
+    "Additional simulators through the same adapter contract"
+  ]
+}

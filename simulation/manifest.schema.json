@@ -1,0 +1,89 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AFAI draft experiment manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "project_id",
+    "task_id",
+    "adapter",
+    "runtime_version",
+    "asset_uri",
+    "seed",
+    "time_budget_minutes",
+    "status",
+    "execution_enabled",
+    "acceptance_criteria",
+    "artifacts",
+    "missing"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "1.0"
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+    },
+    "task_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9_-]{1,80}$"
+    },
+    "adapter": {
+      "enum": [
+        "isaac_sim",
+        "isaac_lab",
+        "omniverse",
+        "cosmos",
+        "mujoco"
+      ]
+    },
+    "runtime_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "asset_uri": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "seed": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "time_budget_minutes": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 1440
+    },
+    "status": {
+      "const": "draft"
+    },
+    "execution_enabled": {
+      "const": false
+    },
+    "acceptance_criteria": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "missing": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
