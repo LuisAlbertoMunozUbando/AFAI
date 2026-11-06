@@ -153,3 +153,9 @@ The public homepage is currently a product preview only. Do not enter confidenti
 See [simulation/README.md](simulation/README.md) for backend boundaries, proposed API and adapter validation gates, [adapters.json](simulation/adapters.json) for the integration registry, and [manifest.schema.json](simulation/manifest.schema.json) for draft validation. These are frontend functions and integration contracts, not installed simulation runtimes. All simulation adapters remain disconnected.
 
 The homepage currently configures a Spark gateway URL and implements token-based chat/quota calls; its live availability was not verified for this change. Older statements above that the homepage never sends prompts describe the earlier preview, not the current configured Q&A code. This change preserves that code unchanged.
+
+## Automation diagnostic PDF service
+
+The homepage links to [¿Qué quieres automatizar?](./automation-diagnostic.html). Visitors describe their company, process, objective and pitch; email is optional and names the PDF. The implementation includes a durable Spark inference queue, three AI review/proposal stages, an official NVIDIA reference catalog, PDF rendering and verified private Google Drive archival.
+
+**Activation pending:** source implementation is complete, but Spark deployment and a real inference-to-Drive round trip are not verified. The public gateway returned Cloudflare error 1033 during this change. The form checks readiness and does not submit while offline. See [deployment instructions and exact integration boundaries](./spark-gateway/DIAGNOSTICS.md). This diagnostic service is separate from the existing token-based Q&A gateway.

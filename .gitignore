@@ -8,3 +8,5 @@
 *private_tokens*.xlsx
 *.backup-*
 __pycache__/
+.diagnostic-venv/
+.pytest_cache/

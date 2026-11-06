@@ -1,0 +1,10 @@
+[
+ {"id":"isaac-sim","name":"NVIDIA Isaac Sim","use":"Simulación robótica y datos sintéticos; validar sensores, geometría y escenarios antes de pruebas físicas.","url":"https://developer.nvidia.com/isaac/sim","checked":"2026-11-06"},
+ {"id":"isaac-ros","name":"NVIDIA Isaac ROS","use":"Percepción y navegación aceleradas en aplicaciones ROS 2; verificar versiones y hardware compatibles.","url":"https://developer.nvidia.com/isaac","checked":"2026-11-06"},
+ {"id":"jetson","name":"NVIDIA Jetson","use":"Inferencia y percepción en el borde; dimensionar memoria, latencia, energía y condiciones ambientales.","url":"https://www.nvidia.com/en-us/industries/robotics/","checked":"2026-11-06"},
+ {"id":"deepstream","name":"NVIDIA DeepStream","use":"Pipelines de análisis de video y múltiples sensores; útil para inspección y monitoreo por cámaras.","url":"https://github.com/NVIDIA/DeepStream","checked":"2026-11-06"},
+ {"id":"tensorrt","name":"NVIDIA TensorRT","use":"Optimización de inferencia; medir precisión y latencia después de optimizar o cuantizar un modelo.","url":"https://developer.nvidia.com/tensorrt","checked":"2026-11-06"},
+ {"id":"nim","name":"NVIDIA NIM","use":"Despliegue de microservicios de inferencia; comprobar compatibilidad, memoria y licencia de cada modelo.","url":"https://developer.nvidia.com/nim","checked":"2026-11-06"},
+ {"id":"cosmos","name":"NVIDIA Cosmos","use":"Modelos de mundo y generación de datos para Physical AI; no sustituyen la validación física ni garantizan seguridad.","url":"https://docs.nvidia.com/cosmos/index.html","checked":"2026-11-06"},
+ {"id":"nemo","name":"NVIDIA NeMo / Nemotron","use":"Herramientas y modelos para desarrollar soluciones de IA y agentes; evaluar necesidades de datos, calidad y recursos.","url":"https://developer.nvidia.com/topics/ai/generative-ai","checked":"2026-11-06"}
+]
