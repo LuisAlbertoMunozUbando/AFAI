@@ -41,7 +41,6 @@ async function poll(){
 form.addEventListener('submit',async event=>{
   event.preventDefault();if(busy||!ready||!form.reportValidity())return;
   const payload=Object.fromEntries(new FormData(form));payload.consent=form.elements.consent.checked;
-  payload.language=document.documentElement.lang||'en';
   const body=JSON.stringify(payload);
   // Preserve the key across transport retries for the same request.
   if(body!==submitted){key=token();submitted=body;}
